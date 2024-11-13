@@ -1,3 +1,185 @@
+@import '../scss/variable.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: $main-background;
+}
+
+main {
+  #aboutTitle {
+    text-align: center;
+
+    h3 {
+      color: #E3B6B1;
+      font-family: $h1-font-family;
+      font-weight: $h1-font-weight;
+      font-size: 48px;
+    }
+
+    h1 {
+      color: $h1-font-color;
+      font-family: $h1-font-family;
+      font-weight: $h1-font-weight;
+      font-size: 80px;
+    }
+  }
+
+  #aboutBody {
+    background-color: $light-pink;
+
+    #aboutContent {
+      display: flex;
+      flex-direction: row;
+      padding: 108px 135px 108px 135px;
+      gap: 40px;
+    }
+
+    .border-container {
+      position: relative;
+
+      img {
+        width: 351px;
+        /* 圖片的寬度 */
+        height: 424px;
+        /* 圖片的高度 */
+        display: block;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 21px;
+        left: 19.5px;
+        right: 19.5px;
+        bottom: 21px;
+        border: 0.86px solid #FBFAFA;
+        pointer-events: none;
+        /* 讓內框不影響點擊事件 */
+      }
+    }
+
+    h3 {
+      color: $h1-font-color;
+      font-family: $h1-font-family;
+      font-weight: $h1-font-weight;
+      margin: 0;
+      font-size: 48px;
+    }
+
+    p {
+      color: #000000;
+      font-family: $describe-font-family;
+      font-size: 18px;
+    }
+
+    button {
+      font-family: $h1-font-family;
+      color: #5E4A49;
+      border: 0.8px solid #5E4A49;
+      background-color: transparent;
+      font-size: 20px;
+      padding: 24px 32px;
+      min-width: 160px;
+    }
+  }
+
+  #aboutBrands {
+    h3 {
+      text-align: center;
+      color: $h1-font-color;
+      font-family: $h1-font-family;
+      font-weight: $h1-font-weight;
+      font-size: 48px;
+    }
+
+    #brandsImg {
+      display: grid;
+      justify-content: center;
+      justify-items: center;
+      grid-template-columns: repeat(4, 230px);
+      grid-auto-rows: 100px;
+      opacity: 60%;
+
+      img {
+        max-width: 160px;
+        max-height: 78px;
+      }
+    }
+  }
+}
+
+
 @media (max-width: 360px) {
-  
+  main {
+    #aboutTitle {
+      text-align: center;
+
+      h3 {
+        font-size: 36px;
+      }
+
+      h1 {
+        font-size: 33px;
+      }
+    }
+
+    #aboutBody {
+      #aboutContent {
+        padding: 0;
+        width: 100%;
+        display: inline-flex;
+        flex-direction: column;
+      }
+
+      .border-container {
+        position: relative;
+
+        img {
+          width: 100%;
+          display: block;
+        }
+      }
+
+      .content {
+        padding: 20px;
+      }
+
+      h3 {
+        font-size: 32px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      #btn {
+        text-align: center;
+
+        button {
+          font-size: 18px;
+          padding: 20px 32px;
+        }
+      }
+    }
+
+    #aboutBrands {
+      h3 {
+        font-size: 32px;
+      }
+
+      #brandsImg {
+        grid-template-columns: repeat(2, 130px);
+        grid-auto-rows: 80px;
+        opacity: 60%;
+
+        img {
+          max-width: 110px;
+          max-height: 70px;
+        }
+      }
+    }
+  }
 }
