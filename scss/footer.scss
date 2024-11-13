@@ -33,7 +33,7 @@ footer {
     border-bottom: 1px solid black;
 
     div a {
-      text-decoration: none; /* 預設無下底線 */
+      text-decoration: none;
       color: var.$h1-font-color;
       font-weight: var.$h1-font-weight;
       font-family: var.$h1-font-family;
@@ -44,7 +44,7 @@ footer {
       }
 
       &:hover {
-        text-decoration: underline; /* 滑鼠懸停時顯示下底線 */
+        text-decoration: underline;
         text-underline-offset: 3px;
         text-decoration-thickness: 1px;
         text-decoration-color: var.$h1-font-color;
