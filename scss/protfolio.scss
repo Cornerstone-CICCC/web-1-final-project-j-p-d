@@ -1,3 +1,152 @@
-@media (max-width: 360px) {
+@use 'variable' as *;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#my-work-description {
+  h1 {
+    font-family: $h1-font-family;
+    font-weight: $h1-font-weight;
+    font-size: $h1-font-size-desktop;
+    color: $h1-font-color;
+    text-align: center;
+    margin-top: 100px;
+    letter-spacing: 10px;
+  }
+
+  hr {
+    width: 200px;
+    height: 1px;
+    border: none;
+    background-color: $title-border-color;
+    margin: 0 auto 30px auto;
+  }
+
+  p {
+    max-width: 585px;
+    height: 54px;
+    font-family: $describe-font-family;
+    font-size: $describe-font-size-desktop;
+    color: $describe-font-color;
+    font-weight: $describe-font-weight;
+    text-align: center;
+    margin: 20px auto;
+  }
+}
+
+#my-work-main {
+  background-color: $light-pink;
+  width: 100%;
+  padding: 40px 0;
+
+  #switch-tab {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    .tab {
+      text-align: center;
+      width: 242px;
+      height: 53px;
+      cursor: pointer;
+      font-size: 32px;
+      font-family: $h1-font-family;
+      border-bottom: 1px solid black;
+    }
+  }
+
+  .img-list {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1022px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  
+    img {
+      width: 100%;
+      max-width: 335px;
+      height: 357px;
+    }
+  }
+
+  #view-more {
+    width: 161px;
+    height: 62px;
+    border: 1px solid $h1-font-color;
+    color: $h1-font-color;
+    font-family: $h1-font-family;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 70px auto;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $dark-pink;
+      border-color: $dark-pink;
+      color: $main-background;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #my-work-description {
+    h1 {
+      font-size: 40px;
+      letter-spacing: 6px;
+    }
+
+    p {
+      font-size: 16px;
+      height: 78px;
+    }
+  }
+
+  #my-work-main {
+    #switch-tab {
+      .tab {
+        font-size: 24px;
+        width: 159.5px;
+        height: 48px;
+      }
+    }
+
+    .img-list {
+      grid-template-columns: 1fr;
+
+      img {
+        width: 100%;
+        max-width: 319px;
+        height: 298px;
+        margin: 0 auto;
+      }
+
+      img:nth-child(n+5) {
+        display: none;
+      }
+
+      #view-more {
+        height: 54px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.hide-imgs {
+  display: none !important;
+}
+
+.show-imgs {
+  display: grid !important;
+}
+
+.opacity {
+  opacity: 0.4;
 }
