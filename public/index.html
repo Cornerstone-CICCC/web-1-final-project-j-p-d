@@ -13,8 +13,71 @@
         <div id="part-2"></div>
         <div id="part-3"></div>
         <div id="part-4"></div>
-        <div id="part-5"></div>
-        <div id="part-6"></div>
+        <div id="part-5">
+            <h3>DIY Beauty Corner</h3>
+            <div>
+                <video src=""></video>
+            </div>
+        </div>
+        <div id="part-6">
+            <h1>Let’s talk</h1>
+            <p>Check availability, pricing, and schedule a meeting for your special day or our academy services.</p>
+            <form action="">
+                <fieldset>
+                    <h5>Services</h5>
+                    <div>
+                        <label for="">Event Type</label>
+                        <div class="eventType">
+                            <label for="wedding">Wedding</label>
+                            <input type="checkbox" id="wedding"> 
+                        </div>
+                        <div class="eventType">
+                            <label for="party">Party</label>
+                            <input type="checkbox" id="party">
+                        </div>
+                        <div class="eventType">
+                            <label for="photoshoot">Photoshoot</label>
+                            <input type="checkbox" id="photoshoot">
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="eventDate">Event Date</label>
+                            <input type="date" id="eventDate">
+                            <input type="checkbox" id="checkbox1">
+                            <label for="checkbox1">Not decided</label>
+                        </div>
+                        <div>
+                            <label for="eventTime">Event Time</label>
+                            <input type="text" list="eventTimeList" id="eventTime">
+                            <datalist id="eventTimeList">
+                                <option value="Full day"></option>
+                                <option value="Half day"></option>
+                                <option value="1 hour"></option>
+                            </datalist>
+                            <input type="checkbox" id="checkbox2">
+                            <label for="checkbox2">Not decided</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>   
+                    </div>
+                    <div>
+                        <label for="">Contact</label>
+                        <input type="radio" id="call">
+                        <label for="call">Call</label>
+                        <input type="radio" id="whatsapp">
+                        <label for="whatsapp">WhatsApp</label>
+                        <input type="radio" id="sms">
+                        <label for="sms">SMS</label>
+                        <input type="radio" id="mail">
+                        <label for="mail">Mail</label>
+                    </div>
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </form>
+        </div>
     </main>
     <footer></footer>
 </body>
