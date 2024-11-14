@@ -1,3 +1,569 @@
-@media (max-width: 360px) {
+@use '../scss/variable.scss' as var;
 
+* {
+   margin: 0;
+}
+
+// for navigation bar
+main {
+  margin-top: 196px;
+}
+
+@media (max-width: 1090px) {
+  main {
+    margin-top: 120px;
+  }
+}
+
+#part-3 {
+  background-color: var.$main-background;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 0;
+
+    h1 {
+      font-size: var.$h1-font-size-desktop;
+      font-family: var.$h1-font-family;
+      font-weight: var.$h1-font-weight;
+      color: var.$h1-font-color;
+      text-align: center;
+      margin: 0;
+    }
+
+    .border {
+      width: 200px;
+      height: 1px;
+      border-bottom: 1px solid var.$title-border-color;
+      margin: 1rem 0;
+    }
+
+    .describe p {
+      width: 437px;
+      text-align: center;
+      font-size: var.$describe-font-size-desktop;
+      font-family: var.$describe-font-family;
+      color: var.$describe-font-color;
+      line-height: 27px;
+    }
+
+    button {
+      width: 171px;
+      height: 62px;
+      border: 1px solid var.$h1-font-color;
+      color: var.$h1-font-color;
+      background: var.$main-background;
+      font-family: var.$h1-font-family;
+      font-size: 20px;
+      margin-top: 1.5rem;
+
+      &:hover {
+        color: white;
+        background: var.$dark-pink;
+        border: 1px solid var.$dark-pink;
+      }
+    }
+  }
+
+  #desktop-photos {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+    .party {
+      position: relative;
+
+      .img-effect {
+        position: relative;
+
+        .image-frame {
+          position: relative;
+          width: 298px;
+          height: 384px;
+          overflow: hidden;
+
+          img {
+            width: 360px;
+            height: 416px;
+          }
+
+          &:hover {
+            width: 387px;
+            height: 500px;
+
+            img {
+              width: 458px;
+              height: 500px;
+            }
+          }
+        }
+
+        &:hover::before {
+          content: '';
+          position: absolute;
+          width: 387px;
+          height: 500px;
+          border: 1px solid #DDBAB6;
+          top: -30px;
+          left: 30px;
+        }
+
+        &:hover + .subject {
+          top: 360px;
+          left: -50px;
+
+          span {
+            z-index: 2;
+
+            &:first-of-type {
+              font-size: 85px;
+              font-family: var.$h1-font-family;
+              color: var.$dark-pink
+            }
+
+            &:last-of-type {
+              font-size: 85px;
+              font-family: var.$h1-font-family;
+              color: var.$light-pink
+            }
+          }
+        }
+      }
+
+      .subject {
+        position: absolute;
+        top: 280px;
+        left: -36px;
+
+        span {
+          &:first-of-type {
+            font-size: 65px;
+            font-family: var.$h1-font-family;
+            color: var.$dark-pink
+          }
+
+          &:last-of-type {
+            font-size: 65px;
+            font-family: var.$h1-font-family;
+            color: var.$light-pink
+          }
+        }
+      }
+    }
+
+    .wedding {
+      position: relative;
+
+      .image-frame {
+        position: relative;
+        width: 387px;
+        height: 500px;
+        overflow: hidden;
+
+        img {
+          width: 458px;
+          height: 500px;
+        }
+      }
+
+      .subject {
+        position: absolute;
+        top: 360px;
+        left: -70px;
+
+        span {
+          z-index:2;
+
+          &:first-of-type {
+            font-size: 85px;
+            font-family: var.$h1-font-family;
+            color: var.$dark-pink
+          }
+
+          &:last-of-type {
+            font-size: 85px;
+            font-family: var.$h1-font-family;
+            color: var.$light-pink
+          }
+        }
+      }
+
+      .img-border {
+        width: 387px;
+        height: 500px;
+        border: 1px solid #DDBAB6;
+        position: absolute;
+        top: -30px;
+        left: 30px;
+      }
+    }
+
+    .photoshoot {
+      position: relative;
+
+      .img-effect {
+        position: relative;
+
+        .image-frame {
+          position: relative;
+          width: 298px;
+          height: 384px;
+          overflow: hidden;
+
+          img {
+            width: 385px;
+            height: 385px;
+          }
+
+          &:hover {
+            width: 387px;
+            height: 500px;
+
+            img {
+              width: 458px;
+              height: 500px;
+            }
+          }
+        }
+
+        &:hover::before {
+          content: '';
+          position: absolute;
+          width: 387px;
+          height: 500px;
+          border: 1px solid #DDBAB6;
+          top: -30px;
+          left: 30px;
+        }
+
+        &:hover + .subject {
+          top: 360px;
+          left: -50px;
+
+          span {
+            z-index: 2;
+
+            &:first-of-type {
+              font-size: 85px;
+              font-family: var.$h1-font-family;
+              color: var.$dark-pink
+            }
+
+            &:last-of-type {
+              font-size: 85px;
+              font-family: var.$h1-font-family;
+              color: var.$light-pink
+            }
+          }
+        }
+      }
+
+      .subject {
+        position: absolute;
+        top: 280px;
+        left: -36px;
+
+        span {
+          &:first-of-type {
+            font-size: 65px;
+            font-family: var.$h1-font-family;
+            color: var.$dark-pink
+          }
+
+          &:last-of-type {
+            font-size: 65px;
+            font-family: var.$h1-font-family;
+            color: var.$light-pink
+          }
+        }
+      }
+    }
+  }
+
+  #mobile-photos {
+    display: none;
+    flex-direction: column;
+    margin-top: 2.5rem;
+    margin-bottom: 5rem;
+    gap: 20px;
+
+    > div {
+      position: relative;
+
+      .image-frame {
+        width: 273px;
+        height: 352px;
+        overflow: hidden;
+
+        img {
+          width: 323px;
+          height: 352px;
+        }
+      }
+
+      .subject {
+        font-size: 50px;
+        font-family: var.$h1-font-family;
+        color: #F8F6F4;
+        position: absolute;
+      }
+    }
+
+    .wedding .subject {
+      bottom: 10px;
+      left: 50px;
+    }
+
+    .party .subject {
+      bottom: 10px;
+      left: 80px;
+    }
+
+    .photoshoot .subject {
+      bottom: 10px;
+      left: 20px;
+    }
+  }
+
+  @media (max-width: 1090px) {
+    .title {
+      h1 {
+        font-size: var.$h1-font-size-mobile;
+      }
+
+      .describe p {
+        width: 328px;
+        font-size: var.$describe-font-size-mobile;
+        line-height: 25.6px;
+      }
+    }
+
+    #desktop-photos {
+      display: none;
+    }
+
+    #mobile-photos {
+      display: flex;
+    }
+  }
+}
+
+#part-4 {
+  display: flex;
+  justify-content: center;
+  background-color: var.$main-background;
+
+  .desktop-board {
+    width: 1303px;
+    height: 819px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var.$light-pink;
+
+    h1 {
+      font-size: var.$h1-font-size-desktop;
+      font-family: var.$h1-font-family;
+      color: var.$h1-font-color;
+      margin: 3rem 0;
+    }
+
+    .intro {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+
+      .context {
+        .item {
+          position: relative;
+          width: 538px;
+          margin-top: 1rem;
+          padding: 1rem 2rem;
+
+          &:hover {
+            background: #F3DAD6;
+          }
+
+          .title {
+            font-size: 32px;
+            font-family: var.$h1-font-family;
+            color: var.$h1-font-color;
+            font-weight: var.$h1-font-weight;
+          }
+
+          .arrow {
+            position: absolute;
+            right: 10px;
+            top: 40px;
+          }
+
+          p {
+            width: 420px;
+            font-size: var.$describe-font-size-desktop;
+            margin-top: 1rem;
+          }
+        }
+
+        button {
+          width: 160px;
+          height: 62px;
+          background: var.$light-pink;
+          color: #5E4A49;
+          border: 1px solid #5E4A49;
+          font-size: var.$describe-font-size-desktop;
+          font-family: var.$h1-font-family;
+          margin-top: 2rem;
+
+          &:hover {
+            color: white;
+            background: var.$dark-pink;
+            border: 1px solid var.$dark-pink;
+          }
+        }
+      }
+
+      .img {
+        .img-frame {
+          width: 407px;
+          height: 530px;
+          overflow: hidden;
+          position: relative;
+
+          img {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 407px;
+            height: auto;
+          }
+
+          .img-border {
+             width: 369px;
+             height: 494px;
+             position: absolute;
+             left: 20px;
+             top: 20px;
+             border: 1px solid #F8F6F4;
+          }
+        }
+      }
+    }
+  }
+
+  .mobile-board {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var.$light-pink;
+
+    h1 {
+      font-size: var.$h1-font-size-mobile;
+      font-family: var.$h1-font-family;
+      font-weight: var.$h1-font-weight;
+      color: var.$h1-font-color;
+      margin: 1.5rem 0 1rem 0;
+    }
+
+    .context {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        > svg {
+          margin: 1rem;
+        }
+
+        .title {
+          font-size: 32px;
+          font-family: var.$h1-font-family;
+          color: var.$h1-font-color;
+        }
+
+        p {
+          width: 316px;
+          height: auto;
+          text-align: center;
+          font-size: var.$describe-font-size-mobile;
+          line-height: 25.6px;
+        }
+
+        .view-class {
+          width: 127px;
+          height: 24px;
+          display: flex;
+          font-size: 20px;
+          font-family: var.$h1-font-family;
+          align-items: normal;
+          justify-content: center;
+          line-height: 24px;
+          margin-top: 1rem;
+          color: var.$h1-font-color;
+        }
+      }
+
+      button {
+        width: 312px;
+        height: 53px;
+        background: var.$light-pink;
+        font-size: var.$describe-font-size-desktop;
+        font-family: var.$h1-font-family;
+        border: 1px solid #5E4A49;
+        color: #5E4A49;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .img {
+      .img-frame {
+        width: 360px;
+        height: 468px;
+        overflow: hidden;
+        position: relative;
+
+        img {
+          width: 360px;
+          height: auto;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+
+        .img-border {
+          width: 326px;
+          height: 431px;
+          position: absolute;
+          left: 20px;
+          top: 20px;
+          border: 1px solid #F8F6F4;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1090px) {
+    .desktop-board {
+      display: none;
+    }
+
+    .mobile-board {
+      display: flex;
+    }
+  }
 }
