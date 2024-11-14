@@ -10,6 +10,7 @@ footer {
   font-size: var.$describe-font-size-desktop;
   font-weight: var.$describe-font-weight;
   background-color: var.$main-background;
+  padding-top: 1.5rem;
 
   > div {
     margin-top: 1rem;
@@ -54,16 +55,6 @@ footer {
 }
 
 @media (max-width: 730px) {
-  header {
-    #desktop-header {
-      display: none;
-    }
-
-    #mobile-header {
-      display: flex;
-    }
-  }
-
   footer #footer-links {
     grid-template-columns: repeat(2, 9rem);
     row-gap: .5rem;

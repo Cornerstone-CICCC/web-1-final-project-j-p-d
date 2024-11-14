@@ -1,3 +1,211 @@
-@media (max-width: 360px) {
+@use '../scss/variable.scss' as var;
 
+@mixin service-item($img-frame-left-offset) {
+  width: 1024px;
+  height: 434px;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+  .img-frame {
+    position: relative;
+    width: 320px;
+    height: 380px;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      left: $img-frame-left-offset;
+      bottom: 0;
+      width: 390px;
+      height: 391px;
+      z-index: 1;
+    }
+  }
+
+  .detail {
+    width: 664px;
+    height: auto;
+
+    h1 {
+      font-size: 40px;
+      font-family: var.$h1-font-family;
+      font-weight: var.$h1-font-weight;
+      color: var.$h1-font-color;
+      margin: 0;
+    }
+
+    .booking-inform {
+      display: flex;
+      gap: 1rem;
+      margin: 1rem 0;
+
+      div {
+        display: flex;
+        font-size: var.$describe-font-size-desktop;
+        font-family: var.$describe-font-family;
+        line-height: 27px;
+
+        svg {
+          margin-right: 4px;
+        }
+      }
+    }
+
+    .inform {
+      .first-paragraph {
+        font-size: 24px;
+        font-family: var.$h1-font-family;
+        font-weight: var.$h1-font-weight;
+        margin-bottom: .5rem;
+      }
+
+      .context {
+        font-size: var.$describe-font-size-desktop;
+        font-family: var.$describe-font-family;
+        line-height: 27px;
+        margin-bottom: 1rem;
+      }
+
+      button {
+        width: 171px;
+        height: 62px;
+        border: 1px solid var.$h1-font-color;
+        color: var.$h1-font-color;
+        background: var.$light-pink;
+        font-family: var.$h1-font-family;
+        font-size: 20px;
+
+        &:hover {
+          color: var.$light-pink;
+          background: var.$h1-font-color;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1090px) {
+    display: block;
+    width: 360px;
+    height: auto;
+    box-sizing: border-box;
+
+    .img-frame {
+      width: 100%;
+      height: 380px;
+
+      img {
+        left: 0;
+        top:0;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .detail {
+      width: 100%;
+      height: auto;
+      padding: 0 1rem 2rem 1rem;
+      box-sizing: border-box;
+
+      .booking-inform div {
+        font-size: var.$describe-font-size-mobile;
+      }
+
+      .inform {
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+* {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+// for navigation bar
+main {
+  margin-top: 196px;
+}
+
+@media (max-width: 1090px) {
+  main {
+    margin-top: 120px;
+  }
+}
+
+#services-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-size: var.$h1-font-size-desktop;
+    font-family: var.$h1-font-family;
+    font-weight: var.$h1-font-weight;
+    color: var.$h1-font-color;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+
+  .border {
+    width: 200px;
+    height: 1px;
+    border-bottom: 1px solid var.$title-border-color;
+    margin: 1rem 0;
+  }
+
+  .describe {
+    margin: 1rem 0;
+
+    p {
+      text-align: center;
+      font-size: var.$describe-font-size-desktop;
+      font-family: var.$describe-font-family;
+      color: var.$describe-font-color;
+      line-height: 27px;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 1090px) {
+    h1 {
+      font-size: var.$h1-font-size-mobile;
+    }
+
+    .describe p {
+      font-size: var.$describe-font-size-mobile;
+    }
+  }
+}
+
+#services-list {
+  background-color: var.$light-pink;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 8rem;
+
+  @media (max-width: 1090px) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .wedding-day {
+    @include service-item(-56.22px);
+  }
+
+  .party-time {
+    @include service-item(-23px);
+  }
+
+  .photo-shoot {
+    @include service-item(-15px);
+  }
 }
