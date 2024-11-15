@@ -16,23 +16,21 @@
         <div id="part-4"></div>
         <div id="part-5">
             <h3>DIY Beauty Corner</h3>
-            <div id="video">
-                <!-- <iframe width="297" height="292" src="https://www.youtube.com/embed/O_qgaOUR3Fo?si=x9zaaUoOJfRngq4I&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe width="297" height="292" src="https://www.youtube.com/embed/VMY6NWXdp84?si=HS4GxkrM__fep7FP&amp;start=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe width="297" height="292" src="https://www.youtube.com/embed/yRyMvy2JYmY?si=1FjeEsQw-bIPGgKQ&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+            <div class="carousel-container"> 
+                <div id="video">
+                    <iframe width="297" height="292" src="https://www.youtube.com/embed/O_qgaOUR3Fo?si=x9zaaUoOJfRngq4I&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="297" height="292" src="https://www.youtube.com/embed/VMY6NWXdp84?si=HS4GxkrM__fep7FP&amp;start=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="297" height="292" src="https://www.youtube.com/embed/yRyMvy2JYmY?si=1FjeEsQw-bIPGgKQ&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>    
             </div>
             <button class="btn">More Beauty Tips</button>
         </div>
         <div id="part-6">
             <div id="talk-title">
                 <h1>LET’S TALK</h1>
-                <p>
-                    Check availability, pricing, and schedule a meeting for your
-                    </br>
-                    special day or our academy services.
-                </p>    
+                <p>Check availability, pricing, and schedule a meeting for your special day or our academy services.</p>    
             </div>
-            <form enctype="multipart/form-data" action="https://formtester.goodbytes.be/post.php" method="post">
+            <form enctype="multipart/form-data" action="#" method="post">
                 <fieldset id="field">
                     <h5>Services</h5>
                     <div>
@@ -85,8 +83,10 @@
                             <input type="radio" id="call">
                             <label for="call">Call</label>
                         </div>
-                        <div>
-                            <input type="text">
+                        <div class="phone">
+                            <select id="country-code">
+                                <option value="+1">+1</option>
+                            </select>
                             <input id="phone" type="tel" name="phone" placeholder="Your mobile number">
                         </div>
                         <div>
