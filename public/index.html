@@ -19,6 +19,7 @@
                 <p>Vancouver's go-to makeup and hairstyle, with a Brazilian twist</p>
                 <a href="">Free Consultation</a>
             </div>
+            <button class="btn">More Beauty Tips</button>
         </div>
         <div id="part-2">
             <section id="profile-container">
@@ -30,6 +31,7 @@
                             <img id="loreal-paris-img" src="./img/home1-2/loreal_paris.png" alt="LOREAL PARIS image">
                             <p>Official Certified Professional</p>
                         </div>
+                        <div id="error-event-type" class="error-message"></div>
                     </div>
                 </div>
                 <div id="right-content">
@@ -253,9 +255,125 @@
                 </div>
             </div>
         </div>
-        <div id="part-5"></div>
-        <div id="part-6"></div>
+        <div id="part-5">
+            <h3>DIY Beauty Corner</h3>
+            <div class="carousel-container">
+                <div id="video">
+                    <iframe width="297" height="292"
+                        src="https://www.youtube.com/embed/O_qgaOUR3Fo?si=x9zaaUoOJfRngq4I&amp;start=1"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="297" height="292"
+                        src="https://www.youtube.com/embed/VMY6NWXdp84?si=HS4GxkrM__fep7FP&amp;start=2"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="297" height="292"
+                        src="https://www.youtube.com/embed/yRyMvy2JYmY?si=1FjeEsQw-bIPGgKQ&amp;start=1"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            <button class="btn">More Beauty Tips</button>
+        </div>
+        <div id="part-6">
+            <div id="talk-title">
+                <h1>LET’S TALK</h1>
+                <p>Check availability, pricing, and schedule a meeting for your special day or our academy services.</p>
+            </div>
+            <form id="event-form" enctype="multipart/form-data" action="" method="post">
+                <fieldset id="field">
+                    <h5>Services</h5>
+                    <div>
+                        <label class="label" for="wedding">Event Type</label>
+                        <div id="event">
+                            <div class="event-type">
+                                <label for="wedding">Wedding</label>
+                                <input type="checkbox" id="wedding" class="custom-checkbox" name="eventType" value="Wedding">
+                            </div>
+                            <div class="event-type">
+                                <label for="party">Party</label>
+                                <input type="checkbox" id="party" class="custom-checkbox" name="eventType" value="Party">
+                            </div>
+                            <div class="event-type">
+                                <label for="photoshoot">Photoshoot</label>
+                                <input type="checkbox" id="photoshoot" class="custom-checkbox" name="eventType"
+                                    value="Photoshoot">
+                            </div>
+                        </div>
+                        <div id="error-event-type" class="error-message"></div>
+                    </div>
+                    <div class="event-date-time">
+                        <div class="event-date">
+                            <label class="label" for="eventDate" placeholder="Select Date">Event Date</label>
+                            <input type="date" id="event-date" name="eventDate">
+                            <div>
+                                <input type="checkbox" id="not-decided-date" class="not-decided">
+                                <label for="not-decided-date">Not decided</label>
+                                <div id="error-event-date" class="error-message"></div>
+                            </div>
+                        </div>
+                        <div class="event-time">
+                            <label class="label" for="eventTime">Event Time</label>
+                            <input type="text" list="eventTimeList" id="event-time" name="eventTime">
+                            <datalist>
+                                <option value="Full day"></option>
+                                <option value="Half day"></option>
+                                <option value="1 hour"></option>
+                            </datalist>
+                            <div>
+                                <input type="checkbox" id="not-decided-time" class="not-decided">
+                                <label for="not-decided-time">Not decided</label>
+                                <div id="error-event-time" class="error-message"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="name">
+                        <label class="label" for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name">
+                        <div id="error-name" class="error-message"></div>
+                    </div>
+                    <div class="contact">
+                        <label class="label" for="call">Contact</label>
+                        <div>
+                            <input type="radio" id="call" name="contact-item" class="contact-item" class="contact-item"
+                                value="Call" checked>
+                            <label for="call">Call</label>
+                        </div>
+                        <div class="phone">
+                            <select id="country-code">
+                                <option value="+1">+1</option>
+                            </select>
+                            <input id="phone" type="tel" name="phone" placeholder="Your mobile number">
+                        </div>
+                        <div>
+                            <input type="radio" id="whatsapp" name="contact-item" class="contact-item" class="contact-item"
+                                value="WhatsApp">
+                            <label for="whatsapp">WhatsApp</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="sms" name="contact-item" class="contact-item" class="contact-item"
+                                value="SMS">
+                            <label for="sms">SMS</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="mail" name="contact-item" class="contact-item" class="contact-item"
+                                value="Mail">
+                            <label for="mail">Mail</label>
+                        </div>
+                        <div id="error-contact-method" class="error-message"></div>
+                    </div>
+                    <div class="btn">
+                        <button class="btn" type="submit">Submit</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
     </main>
     <my-footer></my-footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="../js/mail.js"></script>
 </body>
 </html>
