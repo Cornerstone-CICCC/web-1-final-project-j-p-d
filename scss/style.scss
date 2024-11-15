@@ -1,9 +1,163 @@
+@import '../scss/variable.scss';
+
+body {
+  background: $main-background;
+}
+
 #part-5 {
+  text-align: center;
+
+  h3 {
+    color: $h1-font-color;
+    font-family: $h1-font-family;
+    font-weight: $h1-font-weight;
+    font-size: 48px;
+  }
+
+  #video {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
   
+  .btn {
+    font-family: $h1-font-family;
+    color: #5E4A49;
+    border: 0.8px solid #5E4A49;
+    background-color: transparent;
+    font-size: 20px;
+    padding: 24px 32px;
+    min-width: 160px;
+    margin: 60px 0 60px 0;
+
+  }
 }
 
 #part-6 {
+  #talk-title {
+    text-align: center;
+    margin: 100px 0 60px 0;
 
+    h1 {
+      color: $h1-font-color;
+      font-family: $h1-font-family;
+      font-weight: $h1-font-weight;
+      font-size: $h1-font-size-desktop;
+      margin: 0;
+    }
+  
+    p {
+      color: #000000;
+      font-family: $describe-font-family;
+      font-weight: $describe-font-weight;
+      font-size: $describe-font-size-desktop;
+    }
+  }
+
+  form {
+    background: $light-pink;  
+    margin: 0 210px 100px 210px;
+        
+    #field {
+      padding: 0 40px;
+  
+      h5 {
+        text-align: center; 
+        border-bottom: 1px solid #888888;
+        color: #000000;
+        font-family: $h1-font-family;
+        font-weight: $h1-font-weight;
+        font-size: 32px;
+        margin: 40px 0;
+      } 
+      
+      .label {
+        font-family: $h1-font-family;
+        font-weight: $h1-font-weight;
+        font-size: 32px;
+      }
+
+      #event {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        gap: 22px;
+
+        .event-type {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex: 1;
+          height: 40px;
+          border: 1px solid #B99692;
+          padding: 10px; /* 內距，讓內容不要緊貼邊框 */
+          background: #F8F6F4;
+        }
+      }
+
+      .event-date-time {
+        display: flex;
+        gap: 22px;
+        margin-bottom: 20px;
+
+        .event-date, .event-time {
+          display: flex;
+          flex-direction: column;
+          flex: 1;  
+          gap: 10px;
+        }
+
+        #eventDate, #eventTime {
+          height: 50px;
+          background: #F8F6F4;
+          border: 1px solid #B99692
+        }
+      }
+
+      .name {
+        display: flex;
+        flex-direction: column;
+        flex: 1; 
+        margin-bottom: 20px;
+
+        #name {
+          height: 50px;
+          background: #F8F6F4;
+          border: 1px solid #B99692
+        }
+      }
+
+      .contact {
+        display: flex;
+        flex-direction: column;
+        flex: 1; 
+        gap: 10px;
+
+        #phone {
+          height: 50px;
+          background: #F8F6F4;
+          border: 1px solid #B99692
+        }
+
+      }
+
+      .btn {
+        text-align: center;
+
+        button {
+          font-family: $h1-font-family;
+          color: #5E4A49;
+          border: 0.8px solid #5E4A49;
+          background-color: transparent;
+          font-size: 20px;
+          padding: 24px 32px;
+          min-width: 160px;
+          margin: 60px 0 60px 0;  
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 360px) {

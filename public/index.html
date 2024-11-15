@@ -16,66 +16,95 @@
         <div id="part-4"></div>
         <div id="part-5">
             <h3>DIY Beauty Corner</h3>
-            <div>
-                <video src=""></video>
+            <div id="video">
+                <!-- <iframe width="297" height="292" src="https://www.youtube.com/embed/O_qgaOUR3Fo?si=x9zaaUoOJfRngq4I&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="297" height="292" src="https://www.youtube.com/embed/VMY6NWXdp84?si=HS4GxkrM__fep7FP&amp;start=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="297" height="292" src="https://www.youtube.com/embed/yRyMvy2JYmY?si=1FjeEsQw-bIPGgKQ&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
             </div>
+            <button class="btn">More Beauty Tips</button>
         </div>
         <div id="part-6">
-            <h1>Let’s talk</h1>
-            <p>Check availability, pricing, and schedule a meeting for your special day or our academy services.</p>
-            <form action="">
-                <fieldset>
+            <div id="talk-title">
+                <h1>LET’S TALK</h1>
+                <p>
+                    Check availability, pricing, and schedule a meeting for your
+                    </br>
+                    special day or our academy services.
+                </p>    
+            </div>
+            <form enctype="multipart/form-data" action="https://formtester.goodbytes.be/post.php" method="post">
+                <fieldset id="field">
                     <h5>Services</h5>
                     <div>
-                        <label for="">Event Type</label>
-                        <div class="eventType">
-                            <label for="wedding">Wedding</label>
-                            <input type="checkbox" id="wedding"> 
-                        </div>
-                        <div class="eventType">
-                            <label for="party">Party</label>
-                            <input type="checkbox" id="party">
-                        </div>
-                        <div class="eventType">
-                            <label for="photoshoot">Photoshoot</label>
-                            <input type="checkbox" id="photoshoot">
+                        <label class="label" for="wedding">Event Type</label>
+                        <div id="event">
+                            <div class="event-type">
+                                <label for="wedding">Wedding</label>
+                                <input type="checkbox" id="wedding" class="custom-checkbox"> 
+                            </div>
+                            <div class="event-type">
+                                <label for="party">Party</label>
+                                <input type="checkbox" id="party" class="custom-checkbox">
+                            </div>
+                            <div class="event-type">
+                                <label for="photoshoot">Photoshoot</label>
+                                <input type="checkbox" id="photoshoot" class="custom-checkbox">
+                            </div>
                         </div>
                     </div>
-                    <div>
-                        <div>
-                            <label for="eventDate">Event Date</label>
+                    <div class="event-date-time">
+                        <div class="event-date">
+                            <label class="label" for="eventDate">Event Date</label>
                             <input type="date" id="eventDate">
-                            <input type="checkbox" id="checkbox1">
-                            <label for="checkbox1">Not decided</label>
+                            <div>
+                                <input type="checkbox" id="checkbox1">
+                                <label for="checkbox1">Not decided</label>    
+                            </div>
                         </div>
-                        <div>
-                            <label for="eventTime">Event Time</label>
+                        <div class="event-time">
+                            <label class="label" for="eventTime">Event Time</label>
                             <input type="text" list="eventTimeList" id="eventTime">
                             <datalist id="eventTimeList">
                                 <option value="Full day"></option>
                                 <option value="Half day"></option>
                                 <option value="1 hour"></option>
                             </datalist>
-                            <input type="checkbox" id="checkbox2">
-                            <label for="checkbox2">Not decided</label>
+                            <div>
+                                <input type="checkbox" id="checkbox2">
+                                <label for="checkbox2">Not decided</label>    
+                            </div>
                         </div>
                     </div>
-                    <div>
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your name" required>   
+                    <div class="name">
+                        <label class="label" for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name">   
                     </div>
-                    <div>
-                        <label for="">Contact</label>
-                        <input type="radio" id="call">
-                        <label for="call">Call</label>
-                        <input type="radio" id="whatsapp">
-                        <label for="whatsapp">WhatsApp</label>
-                        <input type="radio" id="sms">
-                        <label for="sms">SMS</label>
-                        <input type="radio" id="mail">
-                        <label for="mail">Mail</label>
+                    <div class="contact">
+                        <label class="label" for="call">Contact</label>
+                        <div>
+                            <input type="radio" id="call">
+                            <label for="call">Call</label>
+                        </div>
+                        <div>
+                            <input type="text">
+                            <input id="phone" type="tel" name="phone" placeholder="Your mobile number">
+                        </div>
+                        <div>
+                            <input type="radio" id="whatsapp">
+                            <label for="whatsapp">WhatsApp</label>    
+                        </div>
+                        <div>
+                            <input type="radio" id="sms">
+                            <label for="sms">SMS</label>    
+                        </div>
+                        <div>
+                            <input type="radio" id="mail">
+                            <label for="mail">Mail</label>    
+                        </div>
                     </div>
-                    <button type="submit">Submit</button>
+                    <div class="btn">
+                        <button class="btn" type="submit">Submit</button>
+                    </div>
                 </fieldset>
             </form>
         </div>
