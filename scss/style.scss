@@ -952,10 +952,11 @@ main {
 
 #part-5 {
   text-align: center;
-  margin-top: 50px;
+  padding-top: 50px;
+  background-color: var.$main-background;
 
   h3 {
-    margin: 20px 0;
+    margin: 0 0 20px 0;
     color: var.$h1-font-color;
     font-family: var.$h1-font-family;
     font-weight: var.$h1-font-weight;
@@ -987,9 +988,11 @@ main {
 }
 
 #part-6 {
+  background-color: var.$main-background;
+
   #talk-title {
     text-align: center;
-    margin: 100px 0 60px 0;
+    margin: 0 0 60px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
