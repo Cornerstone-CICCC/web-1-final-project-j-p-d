@@ -11,6 +11,7 @@ body {
 main {
   #aboutTitle {
     text-align: center;
+    margin-top: 200px;
 
     h3 {
       color: #E3B6B1;
@@ -83,6 +84,12 @@ main {
       font-size: 20px;
       padding: 24px 32px;
       min-width: 160px;
+
+      &:hover {
+        color: white;
+        background: $dark-pink;
+        border: 1px solid $dark-pink;
+      }
     }
   }
 

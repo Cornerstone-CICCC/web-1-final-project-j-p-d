@@ -210,14 +210,14 @@ main {
   }
 
   #section-title {
+    width: 100%;
     position: relative;
     text-align: center;
-    justify-content: center;
     font-size: 18px;
     font-family: var.$describe-font-family;
     font-weight: 300;
     color: #535353;
-    margin: 50px 0;
+    margin: 50px auto;
 
     &::before,
     &::after {
@@ -740,7 +740,8 @@ main {
 
   .desktop-board {
     width: 1303px;
-    height: 819px;
+    height: auto;
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -859,7 +860,7 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
 
         > svg {
           margin: 1rem;
@@ -883,7 +884,7 @@ main {
           width: 127px;
           height: 24px;
           display: flex;
-          font-size: 20px;
+          font-size: 19px;
           font-family: var.$h1-font-family;
           align-items: normal;
           justify-content: center;
@@ -902,6 +903,12 @@ main {
         border: 1px solid #5E4A49;
         color: #5E4A49;
         margin-bottom: 2rem;
+
+        &:hover {
+          color: white;
+          background: var.$dark-pink;
+          border: 1px solid var.$dark-pink;
+        }
       }
     }
 
@@ -945,8 +952,10 @@ main {
 
 #part-5 {
   text-align: center;
+  margin-top: 50px;
 
   h3 {
+    margin: 20px 0;
     color: var.$h1-font-color;
     font-family: var.$h1-font-family;
     font-weight: var.$h1-font-weight;

@@ -13,7 +13,7 @@
     font-size: $h1-font-size-desktop;
     color: $h1-font-color;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 200px;
     letter-spacing: 10px;
   }
 
@@ -95,7 +95,7 @@
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 1019px) {
   #my-work-description {
     h1 {
       font-size: 40px;
