@@ -989,6 +989,7 @@ main {
 
 #part-6 {
   background-color: var.$main-background;
+  padding-bottom: 100px;
 
   #talk-title {
     text-align: center;
@@ -1017,7 +1018,7 @@ main {
 
   form {
     background: var.$light-pink;
-    margin: 0 210px 100px 210px;
+    margin: 0 210px 0 210px;
 
     .error-message {
       color: red;
@@ -1145,6 +1146,7 @@ main {
           flex-direction: column;
           flex: 1;
           gap: 10px;
+          padding: 1rem;
         }
 
         #event-date,
@@ -1294,7 +1296,8 @@ main {
   #part-6 {
     #talk-title {
       text-align: center;
-      margin: 100px 0 20px 0;
+      margin: 0 0 20px 0;
+      padding-top: 100px;
 
       h1 {
         font-size: var.$h1-font-size-mobile;
