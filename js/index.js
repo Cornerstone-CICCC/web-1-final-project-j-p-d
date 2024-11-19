@@ -112,3 +112,30 @@ if (window.getComputedStyle(desktopHeader).display !== 'none') {
         lastScroll = currentScroll
     })
 }
+
+const targetChatBox = document.querySelector("#target-chat-box");
+let isTargetChatBoxOpen = false;
+
+targetChatBox.addEventListener("click", (e) => {
+    let chatBoxes = document.querySelectorAll('.chat-box')
+
+    if (! isTargetChatBoxOpen) {
+        chatBoxes.forEach((element) => {
+            if (element.classList.contains('sub')) {
+                element.classList.remove('disappear')
+            }
+        })
+
+        targetChatBox.innerHTML = `<img src="img/message-box-close.svg" alt="whatsapp" />`
+    } else {
+        chatBoxes.forEach((element) => {
+            if (element.classList.contains('sub')) {
+                element.classList.add('disappear')
+            }
+        })
+
+        targetChatBox.innerHTML = `<img src="img/message-box-icon.svg" alt="whatsapp" />`
+    }
+
+    isTargetChatBoxOpen = ! isTargetChatBoxOpen;
+})
