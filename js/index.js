@@ -136,3 +136,36 @@ class MyFooter extends HTMLElement {
 
 customElements.define("my-header", MyHeader);
 customElements.define("my-footer", MyFooter);
+
+document.addEventListener("DOMContentLoaded", function () {
+    const comments = [
+        "Carla is the best! She made me the night's brightest star! She stayed with me the whole wedding ensuring I always looked and felt wonderful!!",
+        "Carla Beauty's makeup for my photoshoot was outstanding! Thier expertise and attention to detail made me look perfect in every hot. Highly recommend!",
+        "Carla Beauty's party makeup service was amazing! The makeup lasted all night, keeping me flawless until the end. Thank you, Carla for an unforgettable experience!",
+    ];
+
+    const nameImgUrls = [
+        "./img/home_work/Janny.png",
+        "./img/home_work/Ingrid.png",
+        "./img/home_work/Marcela.png",
+    ];
+
+    let currentIndex = 0;
+
+    function updateComment() {
+        document.getElementById("comment").textContent = comments[currentIndex];
+        document.getElementById('name-img').src = nameImgUrls[currentIndex];
+    }
+
+    document.getElementById("next-btn").addEventListener("click", function () {
+        currentIndex = (currentIndex + 1) % comments.length;
+        updateComment();
+    });
+
+    document.getElementById("prev-btn").addEventListener("click", function () {
+        currentIndex = (currentIndex - 1 + comments.length) % comments.length;
+        updateComment();
+    });
+
+    updateComment();
+});
