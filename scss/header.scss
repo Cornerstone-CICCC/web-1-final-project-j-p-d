@@ -141,20 +141,41 @@ header {
     }
   }
 
-  #chat-box {
-    width: 60px;
-    height: 60px;
+  #chat-boxes {
     position: absolute;
-    top: 600px;
+    bottom: -400px;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
 
-    &:hover {
-      cursor: pointer;
+    .chat-box {
+      width: 60px;
+      height: 60px;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      transition: all 0.4s ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .red {
+      background-color: rgba($color: #c13ed4, $alpha: 0.8);
+    }
+
+    .green {
+      background-color: rgba($color: #6aa2ba, $alpha: 0.8);
+    }
+
+    .blue {
+      background-color: rgba($color: #25d366, $alpha: 0.8);
+    }
+
+    .disappear {
+      opacity: 0;
+      transition: all 0.4s ease-in-out;
     }
   }
 }
