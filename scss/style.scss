@@ -7,10 +7,6 @@
 }
 
 // for navigation bar
-main {
-  margin-top: 196px;
-}
-
 @media (max-width: 1090px) {
   main {
     margin-top: 120px;
@@ -502,6 +498,7 @@ main {
       #name-img {
         width: 162px;
         height: 65px;
+        overflow: hidden;
       }
     }
   }

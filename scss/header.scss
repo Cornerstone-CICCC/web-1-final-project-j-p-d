@@ -1,5 +1,14 @@
 @use './variable' as var;
 
+// for navigation bar
+.small-offset {
+  margin-top: 80px;
+}
+
+.big-offset {
+  margin-top: 155px;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -9,7 +18,7 @@ header {
 
   #desktop-header {
     width: 100%;
-    height: 196px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,17 +31,8 @@ header {
       position: relative;
       padding: 0 2rem;
 
-      &::after {
-        content: "";
-        position: absolute;
-        top: .2rem;
-        right: 0;
-        height: 70%;
-        border-left: 1px solid var.$dark-pink;
-      }
-
-      &:nth-of-type(4)::after, &:last-child::after {
-        content: none;
+      img {
+        width: 80px;
       }
 
       a {
@@ -50,6 +50,40 @@ header {
           text-decoration-thickness: 1px;
           text-decoration-color: var.$h1-font-color;
         }
+      }
+    }
+
+    .separator {
+      color: var.$dark-pink;
+    }
+  }
+
+  .scroll-up {
+    height: 196px;
+    padding: 20px 0;
+
+    .logo-part {
+      .logo {
+        width: 80px;
+      }
+
+      .logo-caption {
+        display: block;
+      }
+    }
+  }
+
+  .scroll-down {
+    height: auto;
+    padding: 20px 0;
+
+    .logo-part {
+      .logo {
+        width: 35px;
+      }
+
+      .logo-caption {
+        display: none;
       }
     }
   }
