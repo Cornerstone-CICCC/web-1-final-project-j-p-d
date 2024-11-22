@@ -11,7 +11,7 @@
 <body>
     <header>
         <div id="desktop-header" class="scroll-up">
-            <div><a href="../public/index.html">Home</a></div>
+            <div><a href="../public/index.html">Home</a></div> <!-- Better to nav or ul element for navigation instead of just divs -->
             <span class="separator">|</span>
             <div><a href="../public/portfolio.html">My Work</a></div>
             <span class="separator">|</span>
@@ -88,7 +88,7 @@
         </div>
     </header>
     <main>
-        <div id="part-1">
+        <div id="part-1"> <!-- Make the ids more descriptive of their content instead of just part-1, part-2, part-3, etc. -->
             <div id="image-container">
                 <div class="bg_dark">
                     <img src="./img/home1-2/top_img.jpeg" alt="home-top" id="top-img">
@@ -169,7 +169,7 @@
         <div id="part-3">
             <div class="title">
                 <h1>MAKEUP &</h1>
-                <h1>HAIRSTYLE</h1>
+                <h1>HAIRSTYLE</h1> <!-- There should only be one h1 element per page. If an h1 element has different styling for each word, you can wrap a span. For example: <h1><span>Hello</span> <span>World</span></h1> -->
                 <div class="border"></div>
                 <div class="describe">
                     <p>We offer fully customizable plan to meet your unique requirements.</p>
@@ -386,12 +386,12 @@
         </div>
         <div id="part-6">
             <div id="talk-title">
-                <h1>LET’S TALK</h1>
+                <h1>LET’S TALK</h1> <!-- You should not use h1 here. An h1 is supposed to represent the whole content of a page, not just a section -->
                 <p>Check availability, pricing, and schedule a meeting for your special day or our academy services.</p>
             </div>
             <form id="event-form" enctype="multipart/form-data" action="" method="post">
                 <fieldset id="field">
-                    <h5>Services</h5>
+                    <h5>Services</h5> <!-- Wrong heading. Don't immediately jump into h5 -->
                     <div>
                         <label class="label" for="wedding">Event Type</label>
                         <div id="event">
